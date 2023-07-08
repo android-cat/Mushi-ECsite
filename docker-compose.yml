@@ -32,6 +32,8 @@ services:
     container_name: workspace
     tty: true
     build: ./workspace
+    ports:
+      - "5173:5173"
     volumes:
       - ./workspace/php.ini:/usr/local/php/php.ini
       - ./src:/var/www/html/
