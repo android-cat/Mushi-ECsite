@@ -39,6 +39,15 @@ services:
       - ./src:/var/www/html/
     depends_on:
       - mysql
+      
+  #メール用コンテナ
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - target: 8025
+        published: ${MAILHOG_PUBLISHED_PORT:-8025}
+        protocol: tcp
+        mode: host
 
 #phpMyAdmin用コンテナ
   phpmyadmin:
