@@ -19,10 +19,9 @@ export default function HeadBar({ user, header, children }) {
                                     <ApplicationLogo className="block h-9 w-auto fill-current text-gray-800" />
                                 </Link>
                             </div>
-
                             <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <NavLink href={route('dashboard')} active={route().current('dashboard')}>
-                                    Dashboard
+                                <NavLink href={route('itemList')} active={route().current('itemList')}>
+                                    List
                                 </NavLink>
                             </div>
                             <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
@@ -30,7 +29,6 @@ export default function HeadBar({ user, header, children }) {
                                     Surpport
                                 </NavLink>
                             </div>
-                            
                         </div>
 
                         <div className="hidden sm:flex sm:items-center sm:ml-6">
