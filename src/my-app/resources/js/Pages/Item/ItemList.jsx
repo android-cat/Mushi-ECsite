@@ -1,11 +1,24 @@
 import { Link, Head } from '@inertiajs/react';
 import HeadBar from '@/Layouts/HeadBar';
+import Item from '@/Components/Item';
+import SearchBox from '@/Components/SerarchBox';
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
     return (
         <>
             <HeadBar user={auth.user}>
-                <Head title="Top" />
-                
+                <Head title="商品一覧" />
+                <form action="/itemList" method='POST'>
+                <SearchBox className='mt-14 flex justify-center h-10'/>
+                </form>
+                <div className="mt-16">
+                        <div className="grid grid-cols-5 gap-6 lg:gap-8">
+                            <Item id="1" userName="user" url="/img/kuwagata.jpg" title="テストテストテステストテストテストテストテスト" volume="1" price="1000000"/>
+                            <Item id="2" userName="user" url="/img/kuwagata.jpg" title="テストテストテステストテストテストテストテスト" volume="1" price="1000000"/>
+                            <Item id="3" userName="user" url="/img/kuwagata.jpg" title="テストテストテステストテストテストテストテスト" volume="1" price="1000000"/>
+                            <Item id="4" userName="user" url="/img/kuwagata.jpg" title="テストテストテステストテストテストテストテスト" volume="1" price="1000000"/>
+                            <Item id="5" userName="user" url="/img/kuwagata.jpg" title="テストテストテステストテストテストテストテスト" volume="1" price="1000000"/>
+                        </div>
+                </div>
                         <div className="flex justify-center mt-16 px-6 sm:items-center sm:justify-between">
                             <div className="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-left">
                                 <div className="flex items-center gap-4">

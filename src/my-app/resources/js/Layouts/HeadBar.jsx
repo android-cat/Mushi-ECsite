@@ -25,7 +25,7 @@ export default function HeadBar({ user, header, children }) {
                                 </NavLink>
                             </div>
                             <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <NavLink href={route('dashboard')} active={route().current('dashboard')}>
+                                <NavLink href={route('support')} active={route().current('support')}>
                                     Surpport
                                 </NavLink>
                             </div>
@@ -65,6 +65,7 @@ export default function HeadBar({ user, header, children }) {
                                         {user ? (
                                             <>
                                             <Dropdown.Link href={route('profile.edit')}>Profile</Dropdown.Link>
+                                            <Dropdown.Link href={route('dashboard')}>Dashboard</Dropdown.Link>
                                             <Dropdown.Link href={route('logout')} method="post" as="button">
                                                 Log Out
                                             </Dropdown.Link>
